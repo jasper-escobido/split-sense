@@ -1,46 +1,16 @@
-# split-sense (Budget Allocator)
+# React + Vite
 
-React-based financial tool designed for young professionals and fresh graduates to visualize and allocate their salary using customizable budgeting rules (like the 50/30/20 rule). 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-[**Link to Live Demo**] (Add your Vercel/Netlify link here later!)
+Currently, two official plugins are available:
 
-## 📸 Preview
-*(Add a screenshot or GIF of your working calculator here once it is finished!)*
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 🎯 The Problem It Solves
-Fresh graduates entering the workforce often lack a simple, visual framework to map their first real salaries against the actual costs of independent living. SplitSense allows users to input their expected salary and dynamically allocate their budget to see if they can comfortably afford their living situation.
+## React Compiler
 
-## ✨ Features
-* **Dynamic Budget Sliders:** Interconnected sliders (Needs, Wants, Savings) that mathematically constrain each other so the total never exceeds 100%.
-* **Situation Presets:** Quick-select buttons for common scenarios (e.g., "High Rent City", "Living with Parents").
-* **Flexible Income Input:** Toggle between Monthly Salary and Hourly Wage.
-* **Real-Time Calculation:** Instant, text-based financial breakdown as the user adjusts their percentages.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🛠️ Tech Stack
-* **React.js (Vite):** Chosen specifically to handle the complex state management of the interconnected sliders, ensuring the UI updates instantly without page reloads.
-* **Tailwind CSS:** Used for rapid, responsive UI development and clean utility-class styling.
+## Expanding the ESLint configuration
 
-## 🧠 Architecture & Planning
-For a deep dive into the component structure, state management plan, and future stretch goals, please see the [Project Specification Document](./PROJECT_SPEC.md).
-
-## 🚀 How to Run Locally
-
-1. Clone the repository:
-
-   ```bash
-   git clone [https://github.com/yourusername/split-sense.git](https://github.com/yourusername/split-sense.git)
-
-2. Navigate to the project directory:
-
-    ```bash
-    cd split-sense
-
-3. Install dependencies:
-
-    ```bash
-    npm install
-
-4. Start the development server:
-
-     ```bash
-     npm run dev
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
