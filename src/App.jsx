@@ -5,6 +5,7 @@ import IncomeInput from './components/IncomeInput.jsx';
 
 function App() {
   const [amount, setAmount] = useState(0);
+  console.log("Current amount in App:", amount)
 
   return (
     <>
