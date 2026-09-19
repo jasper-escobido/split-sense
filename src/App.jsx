@@ -16,7 +16,7 @@ function App() {
     <>
       <Header />
       <IncomeInput changeAmount={setAmount} />
-      <BudgetSlider />
+      <BudgetSlider onSliderChange={updateNeeds} currentValue={budgetSplit.needs}  />
     </>
   )
 }
