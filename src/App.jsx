@@ -10,9 +10,11 @@ function App() {
   
   function updateBudget(category, newValue) {
     setBudgetSplit({...budgetSplit, [category]: newValue});
-    console.log(budgetSplit);
   }
 
+  function applyPreset(newBudgetSplit) {
+    setBudgetSplit(newBudgetSplit);
+  }
 
   return (
     <>
