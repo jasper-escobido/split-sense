@@ -4,6 +4,7 @@ import Header from './components/Header.jsx'
 import IncomeInput from './components/IncomeInput.jsx';
 import BudgetSliders from './components/BudgetSliders.jsx';
 import PresetButtons from './components/PresetButtons.jsx';
+import ResultsDisplay from './components/ResultsDisplay.jsx';
 
 function App() {
   const [amount, setAmount] = useState(0);
@@ -23,7 +24,7 @@ function App() {
       <IncomeInput changeAmount={setAmount} />
       <BudgetSliders onSliderChange={updateBudget} currentValue={budgetSplit}  />
       <PresetButtons changePreset={applyPreset}/>
-      <ResultsDisplay /*Ill add the props for both amount and budgetSplit so that in the future ResultsDisplay will get the data it needed */ />
+      <ResultsDisplay currentAmount={amount} currentBudgetSplit={budgetSplit} />
     </>
   )
 }
