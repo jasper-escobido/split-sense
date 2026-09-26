@@ -4,9 +4,8 @@ function Header() {
 
     return (
         <>
-        <h1 className="text-4xl font-bold">SplitSense</h1>
-        <p className="text-xl">Visualize your budget before you make the move.</p>
-
+        <h1 className="text-4xl font-bold text-pale-slate-100">SplitSense</h1>
+        <p className="text-xl text-pale-slate-100">Visualize your budget before you make the move.</p>
         </>
     )
 }

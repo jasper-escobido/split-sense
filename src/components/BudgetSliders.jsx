@@ -6,16 +6,23 @@ function BudgetSliders(props) {
     const maxSavings = 100 - (props.currentValue.wants + props.currentValue.needs);
 
     return(
-        <>
-        <label htmlFor='needSlider'>Needs: </label>
-        <input type="range" id="needSlider" value={props.currentValue.needs} max={maxNeeds} onChange={(e) => props.onSliderChange("needs", Number(e.target.value))} />
+        <div className="flex flex-col gap-3">
+            <div className='flex gap-2 justify-start'>
+                <label htmlFor='needSlider' className="text-pale-slate-100">Needs: </label>
+                <input type="range" id="needSlider" className="accent-india-green-600" value={props.currentValue.needs} max={maxNeeds} onChange={(e) => props.onSliderChange("needs", Number(e.target.value))} />
+            </div>
+            
+            <div className='flex gap-2 justify-start'>
+                <label htmlFor='wantSlider' className="text-pale-slate-100">Wants: </label>
+                <input type="range" id="wantSlider" className="accent-india-green-600" value={props.currentValue.wants} max={maxWants} onChange={(e) => props.onSliderChange("wants", Number(e.target.value))} />
+            </div>
+           
+            <div className='flex gap-2 justify-start'>
+                <label htmlFor='savingSlider' className="text-pale-slate-100">Savings: </label>
+                <input type="range" id="savingSlider" className="accent-india-green-600" value={props.currentValue.savings} max={maxSavings} onChange={(e) => props.onSliderChange("savings", Number(e.target.value))} />
+            </div>
+        </div>
 
-        <label htmlFor='wantSlider'>Wants: </label>
-        <input type="range" id="wantSlider" value={props.currentValue.wants} max={maxWants} onChange={(e) => props.onSliderChange("wants", Number(e.target.value))} />
-
-        <label htmlFor='savingSlider'>Savings: </label>
-        <input type="range" id="savingSlider" value={props.currentValue.savings} max={maxSavings} onChange={(e) => props.onSliderChange("savings", Number(e.target.value))} />
-        </>
     )
 }
 

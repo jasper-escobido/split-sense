@@ -7,9 +7,9 @@ function ResultsDisplay(props) {
 
     return (
         <>
-        <p id="amountNeeds">For Needs: {resultNeeds.toFixed()}</p>
-        <p id="amountWants">For Wants: {resultWants.toFixed()}</p>
-        <p id="amountSavings">For Savings: {resultSavings.toFixed()}</p>
+        <p id="amountNeeds" className="text-pale-slate-100">For Needs: {resultNeeds.toFixed()}</p>
+        <p id="amountWants" className="text-pale-slate-100">For Wants: {resultWants.toFixed()}</p>
+        <p id="amountSavings" className="text-pale-slate-100">For Savings: {resultSavings.toFixed()}</p>
         </>
     )
 }

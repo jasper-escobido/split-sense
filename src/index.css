@@ -1,5 +1,60 @@
 @import "tailwindcss";
 
+@theme {
+     --color-lime-50: #e5ffe5;
+    --color-lime-100: #ccffcc;
+    --color-lime-200: #99ff99;
+    --color-lime-300: #66ff66;
+    --color-lime-400: #33ff33;
+    --color-lime-500: #00ff00;
+    --color-lime-600: #00cc00;
+    --color-lime-700: #009900;
+    --color-lime-800: #006600;
+    --color-lime-900: #003300;
+    --color-lime-950: #002400;
+
+    --color-india-green-50: #f0ffe5;
+    --color-india-green-100: #e0ffcc;
+    --color-india-green-200: #c2ff99;
+    --color-india-green-300: #a3ff66;
+    --color-india-green-400: #85ff33;
+    --color-india-green-500: #66ff00;
+    --color-india-green-600: #52cc00;
+    --color-india-green-700: #3d9900;
+    --color-india-green-800: #296600;
+    --color-india-green-900: #143300;
+    --color-india-green-950: #0e2400;
+
+    --color-pale-slate-50: #f0f1f4;
+    --color-pale-slate-100: #e1e4ea;
+    --color-pale-slate-200: #c4c9d4;
+    --color-pale-slate-300: #a6aebf;
+    --color-pale-slate-400: #8992a9;
+    --color-pale-slate-500: #6b7794;
+    --color-pale-slate-600: #565f76;
+    --color-pale-slate-700: #404859;
+    --color-pale-slate-800: #2b303b;
+    --color-pale-slate-900: #15181e;
+    --color-pale-slate-950: #0f1115;
+
+    --color-onyx-50: #f1f5f0;
+    --color-onyx-100: #e3ebe0;
+    --color-onyx-200: #c7d6c2;
+    --color-onyx-300: #abc2a3;
+    --color-onyx-400: #8fad85;
+    --color-onyx-500: #739966;
+    --color-onyx-600: #5c7a52;
+    --color-onyx-700: #455c3d;
+    --color-onyx-800: #2e3d29;
+    --color-onyx-900: #171f14;
+    --color-onyx-950: #10150e;
+}
+
 * {
     box-sizing: border-box;
+   
+}
+
+body {
+    background-color: #15181e;
 }
