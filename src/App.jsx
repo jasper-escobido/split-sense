@@ -19,13 +19,14 @@ function App() {
   }
 
   return (
-    <>
+    <div id="main-container" className='max-w-md mx-auto flex flex-col gap-3 p-14 bg-pale-slate-400'>
       <Header />
       <IncomeInput changeAmount={setAmount} />
       <BudgetSliders onSliderChange={updateBudget} currentValue={budgetSplit}  />
       <PresetButtons changePreset={applyPreset}/>
       <ResultsDisplay currentAmount={amount} currentBudgetSplit={budgetSplit} />
-    </>
+    </div>
+
   )
 }
 
