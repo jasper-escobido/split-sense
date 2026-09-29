@@ -19,7 +19,7 @@ function App() {
   }
 
   return (
-    <div id="main-container" className='max-w-md mx-auto flex flex-col gap-3 p-14 bg-pale-slate-400'>
+    <div id="main-container" className='max-w-md mx-auto flex flex-col gap-3 p-14'>
       <Header />
       <IncomeInput changeAmount={setAmount} />
       <BudgetSliders onSliderChange={updateBudget} currentValue={budgetSplit}  />
