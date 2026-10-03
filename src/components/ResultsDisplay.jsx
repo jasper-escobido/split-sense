@@ -1,9 +1,18 @@
 import '../App.css'
 
 function ResultsDisplay(props) {
-    const resultNeeds = props.currentAmount * (props.currentBudgetSplit.needs / 100);
-    const resultWants = props.currentAmount * (props.currentBudgetSplit.wants / 100);
-    const resultSavings = props.currentAmount * (props.currentBudgetSplit.savings / 100);
+    let totalMonthlyAmount = 0;
+
+    if (props.currentType === "Hourly") {
+        totalMonthlyAmount = props.currentAmount * 160;
+    } else {
+        totalMonthlyAmount = props.currentAmount;
+    }
+
+    const resultNeeds = totalMonthlyAmount * (props.currentBudgetSplit.needs / 100);
+    const resultWants = totalMonthlyAmount * (props.currentBudgetSplit.wants / 100);
+    const resultSavings = totalMonthlyAmount * (props.currentBudgetSplit.savings / 100);
+
 
     return (
         <div className="flex flex-col gap-3 bg-pale-slate-800 p-3 rounded-md">
