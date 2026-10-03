@@ -9,6 +9,7 @@ import ResultsDisplay from './components/ResultsDisplay.jsx';
 function App() {
   const [amount, setAmount] = useState(0);
   const [budgetSplit, setBudgetSplit] = useState({needs: 50, wants: 30, savings: 20});
+  const [incomeType, setIncomeType] = useState("monthly");
   
   function updateBudget(category, newValue) {
     setBudgetSplit({...budgetSplit, [category]: newValue});
@@ -16,6 +17,14 @@ function App() {
 
   function applyPreset(newBudgetSplit) {
     setBudgetSplit(newBudgetSplit);
+  }
+
+  function toggleType() {
+    if (incomeType === "hourly"){
+      setIncomeType("monthly");
+    } else {
+      setIncomeType("hourly");
+    }
   }
 
   return (

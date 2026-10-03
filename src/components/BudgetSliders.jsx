@@ -6,7 +6,7 @@ function BudgetSliders(props) {
     const maxSavings = 100 - (props.currentValue.wants + props.currentValue.needs);
 
     return(
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 bg-pale-slate-800 p-3 rounded-md">
             <div className='flex flex-col gap-2'>
                 <label htmlFor='needSlider' className="text-pale-slate-100">Needs: </label>
                 <input type="range" id="needSlider" className="accent-india-green-600 max-w-md" value={props.currentValue.needs} max={maxNeeds} onChange={(e) => props.onSliderChange("needs", Number(e.target.value))} />
