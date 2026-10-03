@@ -9,7 +9,7 @@ import ResultsDisplay from './components/ResultsDisplay.jsx';
 function App() {
   const [amount, setAmount] = useState(0);
   const [budgetSplit, setBudgetSplit] = useState({needs: 50, wants: 30, savings: 20});
-  const [incomeType, setIncomeType] = useState("monthly");
+  const [incomeType, setIncomeType] = useState("Monthly");
   
   function updateBudget(category, newValue) {
     setBudgetSplit({...budgetSplit, [category]: newValue});
@@ -20,20 +20,20 @@ function App() {
   }
 
   function toggleType() {
-    if (incomeType === "hourly"){
-      setIncomeType("monthly");
+    if (incomeType === "Hourly"){
+      setIncomeType("Monthly");
     } else {
-      setIncomeType("hourly");
+      setIncomeType("Hourly");
     }
   }
 
   return (
     <div id="main-container" className='max-w-md mx-auto flex flex-col gap-3 p-14'>
       <Header />
-      <IncomeInput changeAmount={setAmount} />
+      <IncomeInput changeAmount={setAmount} onTypeChange={toggleType} currentType={incomeType} />
       <BudgetSliders onSliderChange={updateBudget} currentValue={budgetSplit}  />
       <PresetButtons changePreset={applyPreset}/>
-      <ResultsDisplay currentAmount={amount} currentBudgetSplit={budgetSplit} />
+      <ResultsDisplay currentAmount={amount} currentBudgetSplit={budgetSplit} currentType={incomeType} />
     </div>
 
   )
