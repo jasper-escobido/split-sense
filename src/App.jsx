@@ -5,6 +5,7 @@ import IncomeInput from './components/IncomeInput.jsx';
 import BudgetSliders from './components/BudgetSliders.jsx';
 import PresetButtons from './components/PresetButtons.jsx';
 import ResultsDisplay from './components/ResultsDisplay.jsx';
+import BudgetChart from './components/BudgetChart.jsx';
 
 function App() {
   const [amount, setAmount] = useState(0);
@@ -34,6 +35,7 @@ function App() {
       <BudgetSliders onSliderChange={updateBudget} currentValue={budgetSplit}  />
       <PresetButtons changePreset={applyPreset}/>
       <ResultsDisplay currentAmount={amount} currentBudgetSplit={budgetSplit} currentType={incomeType} />
+      <BudgetChart />
     </div>
 
   )

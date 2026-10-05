@@ -1,7 +1,7 @@
 import '../App.css'
 
 function ResultsDisplay(props) {
-    let totalMonthlyAmount = 0;
+    let totalMonthlyAmount;
 
     if (props.currentType === "Hourly") {
         totalMonthlyAmount = props.currentAmount * 160;
