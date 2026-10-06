@@ -35,7 +35,7 @@ function App() {
       <BudgetSliders onSliderChange={updateBudget} currentValue={budgetSplit}  />
       <PresetButtons changePreset={applyPreset}/>
       <ResultsDisplay currentAmount={amount} currentBudgetSplit={budgetSplit} currentType={incomeType} />
-      <BudgetChart />
+      <BudgetChart currentBudgetSplit={budgetSplit} />
     </div>
 
   )
