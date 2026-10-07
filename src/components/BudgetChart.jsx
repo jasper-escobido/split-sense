@@ -9,7 +9,7 @@ function BudgetChart(props) {
     ];
 
     const colors = ['#10b981', '#64748b', '#94a3b8'];
-    
+
     return (
         <div id="main-container" className='flex h-80 w-full flex-col gap-3 rounded-md bg-pale-slate-800 p-3'>
             <ResponsiveContainer width="100%" height="100%">

@@ -9,6 +9,14 @@ function BudgetSliders(props) {
     const [wantsToolTip, setWantsToolTip] = useState(false);
     const [savingsToolTip, setSavingsToolTip] = useState(false);
 
+  function handleNeedChange(newValue) {
+    if (newValue > maxNeeds) {
+        return;
+    } else {
+        props.onSliderChange("needs", Number(e.target.value))
+    }
+  }
+
     return(
         <div className="flex flex-col gap-3 bg-pale-slate-800 p-3 rounded-md">
             
@@ -22,7 +30,7 @@ function BudgetSliders(props) {
                         <p className='text-pale-slate-100 p-1'>Needs (50%): Rent, groceries, utilities, and essential transport.</p>
                     </div>}
                 </div>
-                <input type="range" id="needSlider" className="accent-india-green-600 max-w-md" value={props.currentValue.needs} max={maxNeeds} onChange={(e) => props.onSliderChange("needs", Number(e.target.value))} />
+                <input type="range" id="needSlider" className="accent-india-green-600 max-w-md" value={props.currentValue.needs} max={100} onChange={(e) => handleNeedChange} />
             </div>
             
             <div className='flex flex-col gap-2'>
