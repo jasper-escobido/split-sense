@@ -38,7 +38,7 @@ function BudgetSliders(props) {
             
             <div className='flex flex-col gap-2'>
                 <div className='flex gap-2 relative'>
-                     <label htmlFor='needSlider' className="text-pale-slate-100">Needs: </label> 
+                     <label htmlFor='needSlider' className="text-pale-slate-100">Needs: {props.currentValue.needs}% </label> 
                      <button id='toolTip' className='text-pale-slate-100' onClick={() => setNeedsToolTip(!needsToolTip)}>ⓘ</button>
                      {needsToolTip && 
                      <div className='bg-pale-slate-700 text-pale-slate-100 absolute p-1 top-8 left-8 z-10 w-48 flex flex-col'>
@@ -51,7 +51,7 @@ function BudgetSliders(props) {
             
             <div className='flex flex-col gap-2'>
                 <div className='flex gap-2 relative'>
-                    <label htmlFor='wantSlider' className="text-pale-slate-100">Wants: </label>
+                    <label htmlFor='wantSlider' className="text-pale-slate-100">Wants: {props.currentValue.wants}% </label>
                      <button id='toolTip' className='text-pale-slate-100' onClick={() => setWantsToolTip(!wantsToolTip)}>ⓘ</button>
                      {wantsToolTip && 
                      <div className='bg-pale-slate-700 text-pale-slate-100 absolute p-1 top-8 left-8 z-10 w-48 flex flex-col'>
@@ -64,7 +64,7 @@ function BudgetSliders(props) {
            
             <div className='flex flex-col gap-2'>
                 <div className='flex gap-2 relative'>
-                    <label htmlFor='savingSlider' className="text-pale-slate-100">Savings: </label>
+                    <label htmlFor='savingSlider' className="text-pale-slate-100">Savings: {props.currentValue.savings}% </label>
                     <button id='toolTip' className='text-pale-slate-100' onClick={() => setSavingsToolTip(!savingsToolTip)}>ⓘ</button>
                     {savingsToolTip && 
                     <div className='bg-pale-slate-700 text-pale-slate-100 absolute p-1 top-8 left-8 z-10 w-48 flex flex-col'>
