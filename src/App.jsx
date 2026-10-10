@@ -11,6 +11,7 @@ function App() {
   const [amount, setAmount] = useState(0);
   const [budgetSplit, setBudgetSplit] = useState({needs: 50, wants: 30, savings: 20});
   const [incomeType, setIncomeType] = useState("Monthly");
+  const [warningText, setWarning] = useState(false);
   
   function updateBudget(category, newValue) {
     setBudgetSplit({...budgetSplit, [category]: newValue});
@@ -31,7 +32,7 @@ function App() {
   return (
     <div id="main-container" className='max-w-md mx-auto flex flex-col gap-3 p-14'>
       <Header />
-      <IncomeInput changeAmount={setAmount} onTypeChange={toggleType} currentType={incomeType} />
+      <IncomeInput changeAmount={setAmount} onTypeChange={toggleType} currentType={incomeType} giveWarning={setWarning} showWarning={warningText} />
       <BudgetSliders onSliderChange={updateBudget} currentValue={budgetSplit}  />
       <PresetButtons changePreset={applyPreset}/>
       <ResultsDisplay currentAmount={amount} currentBudgetSplit={budgetSplit} currentType={incomeType} />
