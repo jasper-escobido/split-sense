@@ -36,7 +36,7 @@ function App() {
       <IncomeInput incomeBasis={incomeBasis} onIncomeBasisChange={setIncomeBasis} changeAmount={setAmount} onTypeChange={toggleType} currentType={incomeType} giveWarning={setWarning} showWarning={warningText} />
       <BudgetSliders onSliderChange={updateBudget} currentValue={budgetSplit}  />
       <PresetButtons changePreset={applyPreset}/>
-      <ResultsDisplay incomeBasis={incomeBasis} onIncomeBasisChange={setIncomeBasis} currentAmount={amount} currentBudgetSplit={budgetSplit} currentType={incomeType} />
+      <ResultsDisplay incomeBasis={incomeBasis} currentAmount={amount} currentBudgetSplit={budgetSplit} currentType={incomeType} />
       <BudgetChart currentBudgetSplit={budgetSplit} />
     </div>
 
