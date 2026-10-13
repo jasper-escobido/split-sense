@@ -2,6 +2,7 @@ import '../App.css'
 
 function IncomeInput(props) {
     const buttonStyle = "bg-india-green-600 text-onyx-900 px-2 py-1 rounded-md cursor-pointer hover:bg-india-green-500"
+    const currentBasis = props.incomeBasis;
     return (
         <div className="bg-pale-slate-800 p-3 rounded-md">
             <div id="inputAmount">
@@ -24,8 +25,16 @@ function IncomeInput(props) {
                           }
             </div>
 
-            <div id="toggleButtons" className="py-2">
+            <div id="toggleButtons" className="py-2 flex gap-1">
                 <button className={buttonStyle} onClick={() => props.onTypeChange()}>{props.currentType}</button>
+                <button className={buttonStyle } onClick={() => {
+                    if (props.incomeBasis === "Net") {
+                        props.onIncomeBasisChange("Gross");
+                    } else {
+                        props.onIncomeBasisChange("Net");
+                    }
+
+                }}>{currentBasis}</button>
             </div>
         </div>
     )
