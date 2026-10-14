@@ -7,7 +7,7 @@ function IncomeInput(props) {
         <div className="bg-pale-slate-800 p-3 rounded-md">
             <div id="inputAmount">
                 <label htmlFor="Amount" className="text-pale-slate-100">Enter Your Amount: </label>
-                <input type="number" className="text-pale-slate-100 bg-pale-slate-700" id="Amount" onChange={(e) => {
+                <input type="number" className="text-pale-slate-100 bg-pale-slate-700 w-full" id="Amount" onChange={(e) => {
                     const userInput = Number(e.target.value);
                     if (userInput < 0) {
                           props.changeAmount(0);
