@@ -41,7 +41,7 @@ function IncomeInput(props) {
              {props.currentType === "Hourly" && (
                 <div id="toggleHoursPerWeek">
                     <label htmlFor="hoursPerWeek" className="text-pale-slate-100">Enter your Hours per week: </label>
-                    <input id="hoursPerWeek" className="text-pale-slate-100 bg-pale-slate-700 w-full" type="number" value={props.hoursPerWeek} onChange={(e) => props.onHoursPerWeekChange(Number(e.target.value))} />
+                    <input id="hoursPerWeek" className="text-pale-slate-100 bg-pale-slate-700 w-full" type="number" value={props.hoursPerWeek} onChange={(e) => props.onHoursPerWeekChange(e.target.value)} />
                 </div>
              )}
         </div>
