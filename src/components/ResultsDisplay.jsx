@@ -9,7 +9,7 @@ function ResultsDisplay(props) {
     })
 
     if (props.currentType === "Hourly") {
-        totalMonthlyAmount = props.currentAmount * 160;
+        totalMonthlyAmount = props.currentAmount * (props.hoursPerWeek * 52 / 12);
     } else {
         totalMonthlyAmount = props.currentAmount;
     }

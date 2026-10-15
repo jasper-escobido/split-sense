@@ -3,6 +3,7 @@ import '../App.css'
 function IncomeInput(props) {
     const buttonStyle = "bg-india-green-600 text-onyx-900 px-2 py-1 rounded-md cursor-pointer hover:bg-india-green-500"
     const currentBasis = props.incomeBasis;
+
     return (
         <div className="bg-pale-slate-800 p-3 rounded-md">
             <div id="inputAmount">
@@ -36,6 +37,13 @@ function IncomeInput(props) {
 
                 }}>{currentBasis}</button>
             </div>
+
+             {props.currentType === "Hourly" && (
+                <div id="toggleHoursPerWeek">
+                    <label htmlFor="hoursPerWeek" className="text-pale-slate-100">Enter your Hours per week: </label>
+                    <input id="hoursPerWeek" className="text-pale-slate-100 bg-pale-slate-700 w-full" type="number" value={props.hoursPerWeek} onChange={(e) => props.onHoursPerWeekChange(Number(e.target.value))} />
+                </div>
+             )}
         </div>
     )
 }

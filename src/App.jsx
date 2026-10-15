@@ -13,6 +13,7 @@ function App() {
   const [incomeType, setIncomeType] = useState("Monthly");
   const [warningText, setWarning] = useState(false);
   const [incomeBasis, setIncomeBasis] = useState("Net");
+  const [hoursPerWeek, setHoursPerWeek] = useState(40);
   
   function updateBudget(category, newValue) {
     setBudgetSplit({...budgetSplit, [category]: newValue});
@@ -33,10 +34,10 @@ function App() {
   return (
     <div id="main-container" className='max-w-md mx-auto flex flex-col gap-3 p-14'>
       <Header />
-      <IncomeInput incomeBasis={incomeBasis} onIncomeBasisChange={setIncomeBasis} changeAmount={setAmount} onTypeChange={toggleType} currentType={incomeType} giveWarning={setWarning} showWarning={warningText} />
+      <IncomeInput hoursPerWeek={hoursPerWeek} onHoursPerWeekChange={setHoursPerWeek} incomeBasis={incomeBasis} onIncomeBasisChange={setIncomeBasis} changeAmount={setAmount} onTypeChange={toggleType} currentType={incomeType} giveWarning={setWarning} showWarning={warningText} />
       <BudgetSliders onSliderChange={updateBudget} currentValue={budgetSplit}  />
       <PresetButtons changePreset={applyPreset}/>
-      <ResultsDisplay incomeBasis={incomeBasis} currentAmount={amount} currentBudgetSplit={budgetSplit} currentType={incomeType} />
+      <ResultsDisplay hoursPerWeek={hoursPerWeek}  incomeBasis={incomeBasis} currentAmount={amount} currentBudgetSplit={budgetSplit} currentType={incomeType} />
       <BudgetChart currentBudgetSplit={budgetSplit} />
     </div>
 
